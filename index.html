@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vansh Patel - Portfolio</title>
+    <meta name="description" content="Vansh Patel's portfolio showcasing web development skills, projects, and contact information.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">Vansh Patel</div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
@@ -19,16 +20,20 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="social-links">
-                <li><a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://github.com/youractualprofile" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://linkedin.com/in/youractualprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/youractualprofile" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
             </ul>
+
+            <div id="hamburger" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
     
     <section id="hero">
         <div class="heroimg">
-            <img src="hero.svg" alt="Background Image" class="hero-bg">
+            <img src="hero.svg" alt="Hero background image" class="hero-bg">
         </div>
         <div class="hero-content">
             <h1>Vansh Patel</h1>
@@ -56,15 +61,15 @@
         <h2>Skills</h2>
         <div class="speciality">
             <div class="speciality-card">
-                <img src="programmer.svg" alt="Programmer">
+                <img src="programmer.svg" alt="Programmer icon">
                 <h3>Programming</h3>
             </div>
             <div class="speciality-card">
-                <img src="uiux.svg" alt="UI/UX Design">
+                <img src="uiux.svg" alt="UI/UX Design icon">
                 <h3>UI/UX Design</h3>
             </div>
             <div class="speciality-card">
-                <img src="webd.svg" alt="Web Design">
+                <img src="webd.svg" alt="Web Design icon">
                 <h3>Web Design</h3>
             </div>
         </div>
@@ -88,26 +93,22 @@
         <h2>Projects</h2>
         <div class="projects-container">
             <div class="project">
-                <!-- Placeholder for project image -->
-                <img src="foodorder.svg" alt="Food Ordering App" class="project-img">
+                <img src="foodorder.svg" alt="Food Ordering App screenshot" class="project-img">
                 <h3>Food Ordering App</h3>
                 <p>A comprehensive app for ordering food online with various functionalities.</p>
             </div>
             <div class="project">
-                <!-- Placeholder for project image -->
-                <img src="amazonclone.svg" alt="Amazon Clone" class="project-img">
+                <img src="amazonclone.svg" alt="Amazon Clone screenshot" class="project-img">
                 <h3>Amazon Clone</h3>
                 <p>An Amazon website clone created using HTML and CSS.</p>
             </div>
             <div class="project">
-                <!-- Placeholder for project image -->
-                <img src="fixitpro.svg" alt="FixItPro" class="project-img">
+                <img src="fixitpro.svg" alt="FixItPro screenshot" class="project-img">
                 <h3>FixItPro</h3>
                 <p>A home repair service provider platform.</p>
             </div>
             <div class="project">
-                <!-- Placeholder for project image -->
-                <img src="quiz.svg" alt="Quiz" class="project-img">
+                <img src="quiz.svg" alt="RTO Exam Mock Quiz screenshot" class="project-img">
                 <h3>RTO Exam Mock Quiz</h3>
                 <p>A mock quiz test for RTO online exam.</p>
             </div>
@@ -118,13 +119,13 @@
         <h2>Contact Me</h2>
         <form id="contact-form">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z\s]{1,50}">
             
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
             
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
             
             <button type="submit">Send Message</button>
         </form>
